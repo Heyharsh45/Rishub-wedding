@@ -1,0 +1,859 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff8f3;
+    color: #542f2c;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    position: relative;
+
+    background:
+        radial-gradient(circle at top, #fffdf8, transparent 45%),
+        linear-gradient(180deg, #fff8f3, #fce8df);
+}
+
+.om {
+    font-size: 60px;
+    color: #a45b45;
+
+    margin-bottom: 10px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.small-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+    letter-spacing: 3px;
+
+    color: #9a604c;
+}
+
+.hero h1 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(55px, 10vw, 100px);
+
+    font-weight: 400;
+
+    color: #713b35;
+
+    margin: 15px 0;
+}
+
+.subtitle {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 23px;
+
+    max-width: 600px;
+
+    color: #79544b;
+}
+
+
+/* =========================
+   DEITY IMAGE
+========================= */
+
+.deity-container {
+    margin: 35px 0;
+
+    position: relative;
+}
+
+.deity {
+    width: min(420px, 80vw);
+
+    max-height: 420px;
+
+    object-fit: contain;
+
+    filter: drop-shadow(0 15px 20px rgba(90, 45, 30, 0.15));
+
+    animation: deityFloat 5s ease-in-out infinite;
+}
+
+.invite-text {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    color: #68463f;
+}
+
+.scroll-btn {
+    margin-top: 30px;
+
+    padding: 13px 28px;
+
+    border: 1px solid #a66b59;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    color: #78453c;
+
+    transition: 0.3s;
+}
+
+.scroll-btn:hover {
+    background: #78453c;
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   PETALS
+========================= */
+
+.petals span {
+    position: fixed;
+
+    top: -50px;
+
+    font-size: 22px;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    animation: fall 8s linear infinite;
+}
+
+.petals span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.petals span:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.petals span:nth-child(3) {
+    left: 45%;
+    animation-delay: 4s;
+}
+
+.petals span:nth-child(4) {
+    left: 65%;
+    animation-delay: 1s;
+}
+
+.petals span:nth-child(5) {
+    left: 80%;
+    animation-delay: 3s;
+}
+
+.petals span:nth-child(6) {
+    left: 95%;
+    animation-delay: 5s;
+}
+
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section {
+    padding: 100px 20px;
+
+    text-align: center;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.section-small {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #a46555;
+
+    margin-bottom: 12px;
+}
+
+.section h2,
+.date-section h2,
+.rsvp h2 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: clamp(48px, 7vw, 75px);
+
+    font-weight: 400;
+
+    color: #703c35;
+}
+
+.description {
+    max-width: 550px;
+
+    margin: 15px auto 50px;
+
+    line-height: 1.8;
+
+    color: #765852;
+}
+
+
+/* =========================
+   COUPLE
+========================= */
+
+.couple-section {
+    background: #fffaf7;
+}
+
+.couple-card {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 70px;
+
+    margin-top: 50px;
+}
+
+.person {
+    text-align: center;
+}
+
+.photo {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    margin: auto;
+
+    border: 6px solid #f4d9cd;
+
+    box-shadow: 0 15px 30px rgba(80, 40, 30, 0.12);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.person h3 {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    margin-top: 18px;
+
+    color: #743e36;
+}
+
+.person p {
+    color: #92736c;
+
+    font-size: 14px;
+
+    margin-top: 5px;
+}
+
+.person span {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+}
+
+.heart {
+    font-size: 45px;
+
+    color: #b76c5b;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.date-section {
+    text-align: center;
+
+    padding: 110px 20px;
+
+    background:
+        linear-gradient(
+            rgba(109, 57, 50, 0.92),
+            rgba(109, 57, 50, 0.92)
+        );
+
+    color: white;
+}
+
+.date-section h2 {
+    color: #fff4ee;
+}
+
+.mandala {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.date-box {
+    max-width: 850px;
+
+    margin: 50px auto 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.date-box div {
+    padding: 25px 45px;
+
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+.date-box div:last-child {
+    border-right: none;
+}
+
+.date-box span {
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.7;
+
+    margin-bottom: 10px;
+}
+
+.date-box strong {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   EVENTS
+========================= */
+
+.events {
+    max-width: 1300px;
+}
+
+.events-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 55px;
+}
+
+.event-card {
+    background: #fff;
+
+    padding: 45px 25px;
+
+    border-radius: 20px;
+
+    border: 1px solid #f1dcd3;
+
+    box-shadow:
+        0 15px 40px rgba(70, 35, 25, 0.07);
+
+    transition: 0.4s;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 50px rgba(70, 35, 25, 0.12);
+}
+
+.event-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    color: #703c35;
+
+    margin-bottom: 15px;
+}
+
+.event-card p {
+    font-size: 14px;
+
+    color: #80635d;
+
+    margin: 7px;
+}
+
+.event-card .event-date {
+    font-weight: 600;
+
+    color: #9b5f50;
+}
+
+.event-card span {
+    display: block;
+
+    margin-top: 20px;
+
+    color: #a5776c;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote-section {
+    padding: 110px 25px;
+
+    text-align: center;
+
+    background: #f9e7df;
+}
+
+.quote-symbol {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 90px;
+
+    line-height: 0.5;
+
+    color: #a46050;
+}
+
+.quote-section p {
+    max-width: 750px;
+
+    margin: 30px auto;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    line-height: 1.5;
+
+    color: #633e38;
+}
+
+.quote-section span {
+    font-family: "Great Vibes", cursive;
+
+    font-size: 27px;
+}
+
+.line {
+    width: 80px;
+
+    height: 1px;
+
+    background: #a46050;
+
+    margin: 30px auto;
+}
+
+
+/* =========================
+   VENUE
+========================= */
+
+.venue-card {
+    max-width: 600px;
+
+    margin: 50px auto 0;
+
+    padding: 50px 25px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 50px rgba(60, 30, 20, 0.08);
+}
+
+.venue-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.venue-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 30px;
+
+    color: #703c35;
+
+    margin-bottom: 15px;
+}
+
+.venue-card p {
+    line-height: 1.8;
+
+    color: #80635d;
+}
+
+.map-btn {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 30px;
+
+    border-radius: 50px;
+
+    background: #79453c;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.map-btn:hover {
+    transform: translateY(-3px);
+
+    background: #5e332e;
+}
+
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp {
+    padding: 120px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff5f0,
+            #f8dfd5
+        );
+}
+
+.rsvp > p:not(.section-small) {
+    max-width: 500px;
+
+    margin: 15px auto 35px;
+
+    line-height: 1.7;
+
+    color: #765852;
+}
+
+.rsvp-btn {
+    display: inline-block;
+
+    padding: 15px 40px;
+
+    border-radius: 50px;
+
+    background: #79453c;
+
+    color: white;
+
+    text-decoration: none;
+
+    box-shadow: 0 10px 25px rgba(90, 40, 30, 0.2);
+
+    transition: 0.3s;
+}
+
+.rsvp-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 15px 30px rgba(90, 40, 30, 0.3);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 70px 20px;
+
+    text-align: center;
+
+    background: #60342f;
+
+    color: white;
+}
+
+.footer-om {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+footer h2 {
+    font-family: "Dancing Script", cursive;
+
+    font-size: 55px;
+
+    font-weight: 400;
+}
+
+footer p {
+    margin-top: 5px;
+
+    color: #efd6cd;
+}
+
+.footer-line {
+    width: 80px;
+
+    height: 1px;
+
+    background: #d7a89a;
+
+    margin: 25px auto;
+}
+
+footer small {
+    color: #d9bcb3;
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes float {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+@keyframes deityFloat {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.2);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.2);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes fall {
+
+    0% {
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 100svh;
+
+        padding: 40px 18px;
+    }
+
+    .om {
+        font-size: 45px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .subtitle {
+        font-size: 19px;
+    }
+
+    .deity {
+        width: 75vw;
+    }
+
+    .couple-card {
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .heart {
+        order: 2;
+    }
+
+    .person:nth-child(3) {
+        order: 3;
+    }
+
+    .events-container {
+        grid-template-columns: 1fr;
+    }
+
+    .date-box {
+        flex-direction: column;
+    }
+
+    .date-box div {
+        border-right: none;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.3);
+    }
+
+    .date-box div:last-child {
+        border-bottom: none;
+    }
+
+    .quote-section p {
+        font-size: 25px;
+    }
+
+    footer h2 {
+        font-size: 48px;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .deity {
+        width: 85vw;
+    }
+
+    .person h3 {
+        font-size: 36px;
+    }
+
+    .section {
+        padding: 75px 18px;
+    }
+
+}
